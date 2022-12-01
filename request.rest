@@ -1,0 +1,24 @@
+GET https://onesweetbite.herokuapp.com/api/get-cake/
+
+###
+
+POST https://onesweetbite.herokuapp.com/api/checkout
+Content-Type: application/json
+Authorization: Bearer 80|u2Pq68ofidyHiADT6A0GyACF6baSOS1xiQGpiJcn
+
+{
+    "cake_id": 4,
+    "user_id": 18,
+    "quantity": 1,
+    "total": 130000,
+    "status": "PENDING",
+}
+
+###
+POST https://onesweetbite.herokuapp.com/api/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "admin123",
+}

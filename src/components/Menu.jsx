@@ -51,12 +51,13 @@ const Menu = () => {
           value={search}
         />
       </div>
-      <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch items-center gap-4 m-4">
+      {/* <div className="flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch items-center gap-4 m-4"> */}
+      <div className="flex justify-center flex-row flex-wrap items-stretch  sm:gap-4 gap-1 m-1 sm:m-4">
         {filtered.map((data, i) => {
           return (
             <div
-              className="card card-compact lg:w-96 bg-base-100 shadow-xl"
-              key={data.id}
+              className="card card-compact sm:w-80 w-36 bg-base-100 shadow-xl"
+              key={i}
             >
               <figure className="w-full h-44">
                 <img src={data.picturePath} />
@@ -68,7 +69,7 @@ const Menu = () => {
                 <div className="card-actions justify-end">
                   <Link
                     to={`/detail/${data.id}`}
-                    className="btn btn-primary w-full"
+                    className="btn btn-primary w-full btn-sm"
                   >
                     pesan
                   </Link>
